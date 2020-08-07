@@ -1,0 +1,31 @@
+{{#each this}}
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm">
+    {{!-- <div class="card-body">              </div> --}}
+    <img class="bd-placeholder-img card-img-top" width="auto" height="225" src="{{flag}}" focusable="false" role="img"
+      aria-label="Placeholder: Thumbnail"></img>
+    <div class="card-body">
+      <p class="card-text">Name: {{name}}</p>
+      <p class="card-text">Capital: {{capital}}</p>
+      <p class="card-text">Region: {{region}}</p>
+      <p class="card-text">Population: {{population}}</p>
+      <p class="card-text">Timezone: {{#each timezones}}
+        <span>{{this}},</span>
+        {{/each}}
+      </p>
+      <p class="card-text">Currencies: {{#each currencies}}
+        <span>{{this.code}} </span>
+        {{/each}}
+      </p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Search tickets</button>
+        </div>
+        <small class="text-muted">{{subregion}}</small>
+      </div>
+    </div>
+
+  </div>
+</div>
+{{/each}}
