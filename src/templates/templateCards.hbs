@@ -1,0 +1,65 @@
+{{#each this}}
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm">
+    {{!-- <div class="card-body">              </div> --}}
+    <img class="bd-placeholder-img card-img-top" width="auto" height="225" src="{{webformatURL}}" focusable="false"
+      role="img" aria-label="Placeholder: Thumbnail"></img>
+    <div class="card-body">
+      <span class="card-text"> <span class="material-icons">
+          thumb_up
+        </span> {{likes}}</span>
+      <span class="card-text"> <span class="material-icons">
+          visibility
+        </span> {{views}}</span>
+      <span class="card-text"><span class="material-icons">
+          comment
+        </span> {{comments}}</span>
+      <span class="card-text"><span class="card-text"> <span class="material-icons">
+            cloud_download
+          </span> {{downloads}}</span>
+
+        {{!-- Extra buttons --}}
+        {{!-- <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Buy picture</button>
+        </div>
+        <small class="text-muted">{{subregion}}</small>
+      </div> --}}
+    </div>
+
+  </div>
+</div>
+{{/each}}
+
+
+{{!-- webformatURL - ссылка на маленькое изображение для списка карточек
+    largeImageURL - ссылка на большое изображение (смотри пункт 'дополнительно')
+    -likes - количество лайков
+    -views - количество просмотров
+    comments - количество комментариев
+    downloads - количество загрузок --}}
+
+
+{{!-- <div class="photo-card">
+  <img src="" alt="" />
+
+  <div class="stats">
+    <p class="stats-item">
+      <i class="material-icons">thumb_up</i>
+      1108
+    </p>
+    <p class="stats-item">
+      <i class="material-icons">visibility</i>
+      320321
+    </p>
+    <p class="stats-item">
+      <i class="material-icons">comment</i>
+      129
+    </p>
+    <p class="stats-item">
+      <i class="material-icons">cloud_download</i>
+      176019
+    </p>
+  </div>
+</div> --}}
